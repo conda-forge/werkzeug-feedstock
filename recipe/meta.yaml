@@ -1,7 +1,7 @@
 {% set name = "Werkzeug" %}
-{% set version = "0.11.10" %}
+{% set version = "0.11.15" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cc64dafbacc716cdd42503cf6c44cb5a35576443d82f29f6829e5c49264aeeee" %}
+{% set hash = "455d7798ac263266dbd38d4841f7534dd35ca9c3da4a8df303f8488f38f3bcc0" %}
 
 package:
   name: {{ name|lower }}
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - goanpeca
+    - mathieu1
