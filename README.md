@@ -12,6 +12,18 @@ Summary: The Python WSGI Utility Library.
 Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/werkzeug-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/werkzeug-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/werkzeug-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/werkzeug-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/werkzeug-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/werkzeug-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/werkzeug/badges/version.svg)](https://anaconda.org/conda-forge/werkzeug)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/werkzeug/badges/downloads.svg)](https://anaconda.org/conda-forge/werkzeug)
+
 Installing werkzeug
 ===================
 
@@ -32,7 +44,6 @@ It is possible to list all of the versions of `werkzeug` available on your platf
 ```
 conda search werkzeug --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -68,18 +79,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/werkzeug-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/werkzeug-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/werkzeug-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/werkzeug-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/werkzeug-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/werkzeug-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/werkzeug/badges/version.svg)](https://anaconda.org/conda-forge/werkzeug)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/werkzeug/badges/downloads.svg)](https://anaconda.org/conda-forge/werkzeug)
 
 
 Updating werkzeug-feedstock
