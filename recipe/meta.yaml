@@ -1,7 +1,7 @@
 {% set name = "Werkzeug" %}
-{% set version = "0.11.10" %}
+{% set version = "0.12.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cc64dafbacc716cdd42503cf6c44cb5a35576443d82f29f6829e5c49264aeeee" %}
+{% set hash = "903a7b87b74635244548b30d30db4c8947fe64c5198f58899ddcd3a13c23bb26" %}
 
 package:
   name: {{ name|lower }}
@@ -32,10 +32,13 @@ test:
 about:
   home: http://werkzeug.pocoo.org/
   license: BSD 3-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: The Python WSGI Utility Library.
   description: |
     Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
+  doc_url: http://werkzeug.pocoo.org/docs
+  dev_url: https://github.com/pallets/werkzeug
 
 extra:
   recipe-maintainers:
