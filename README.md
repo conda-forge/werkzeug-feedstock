@@ -15,9 +15,7 @@ Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/werkzeug-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/werkzeug-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/werkzeug-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/werkzeug-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/werkzeug-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/werkzeug-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/werkzeug-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/werkzeug-feedstock)
 
 Current release info
 ====================
