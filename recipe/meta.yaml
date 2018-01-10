@@ -1,7 +1,7 @@
 {% set name = "Werkzeug" %}
-{% set version = "0.13" %}
+{% set version = "0.14.1" %}
 {% set hash_type = "sha256" %}
-{% set hash = "6246e5fc98a505824113fb6aca993d45ea284a2bcffdc2c65d0c538e53e4abd3" %}
+{% set hash = "c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c" %}
 
 package:
   name: {{ name|lower }}
