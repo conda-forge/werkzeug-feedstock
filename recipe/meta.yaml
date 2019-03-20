@@ -30,14 +30,14 @@ test:
     - werkzeug.debug
 
 about:
-  home: http://werkzeug.pocoo.org/
+  home: https://palletsprojects.com/p/werkzeug/
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: The Python WSGI Utility Library.
+  summary: The comprehensive WSGI web application library.
   description: |
     Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
-  doc_url: http://werkzeug.pocoo.org/docs
+  doc_url: https://werkzeug.palletsprojects.com/
   dev_url: https://github.com/pallets/werkzeug
 
 extra:
