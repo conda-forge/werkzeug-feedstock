@@ -28,7 +28,6 @@ test:
   imports:
     - werkzeug
     - werkzeug.debug
-    - werkzeug.contrib
 
 about:
   home: http://werkzeug.pocoo.org/
