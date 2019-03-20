@@ -1,26 +1,23 @@
 {% set name = "Werkzeug" %}
 {% set version = "0.15.0" %}
-{% set hash_type = "sha256" %}
-{% set hash = "590abe38f8be026d78457fe3b5200895b3543e58ac3fc1dd792c6333ea11af64" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: 590abe38f8be026d78457fe3b5200895b3543e58ac3fc1dd792c6333ea11af64
 
 build:
-  number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
 
