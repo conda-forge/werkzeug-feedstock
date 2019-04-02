@@ -1,5 +1,5 @@
 {% set name = "Werkzeug" %}
-{% set version = "0.15.1" %}
+{% set version = "0.15.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca5c2dcd367d6c0df87185b9082929d255358f5391923269335782b213d52655
+  sha256: 0a73e8bb2ff2feecfc5d56e6f458f5b99290ef34f565ffb2665801ff7de6af7a
 
 build:
   noarch: python
