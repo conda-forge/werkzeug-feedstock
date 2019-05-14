@@ -1,13 +1,13 @@
 About werkzeug
 ==============
 
-Home: http://werkzeug.pocoo.org/
+Home: https://palletsprojects.com/p/werkzeug/
 
 Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: The Python WSGI Utility Library.
+Summary: The comprehensive WSGI web application library.
 
 Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
 
@@ -17,9 +17,12 @@ Current build status
 
 
 <table><tr>
+    
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4629&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/werkzeug-feedstock?branchName=master">
+      </a>
     </td>
   </tr>
 </table>
