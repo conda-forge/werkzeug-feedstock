@@ -1,5 +1,5 @@
 {% set name = "Werkzeug" %}
-{% set version = "0.16.0" %}
+{% set version = "0.11.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7280924747b5733b246fe23972186c6b348f9ae29724135a6dfc1e53cea433e7
+  sha256: e72c46bc14405cba7a26bd2ce28df734471bc9016bc8b4cb69466c2c14c2f7e5
 
 build:
-  noarch: python
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -28,9 +28,9 @@ test:
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.rst
+  license_file: LICENSE
   summary: The comprehensive WSGI web application library.
   description: |
     Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
