@@ -23,9 +23,13 @@ requirements:
     - dataclasses
 
 test:
+  requires:
+    - pip
   imports:
     - werkzeug
     - werkzeug.debug
+  commands:
+    - pip check
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
