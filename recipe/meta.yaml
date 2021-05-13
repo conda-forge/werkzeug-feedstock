@@ -28,7 +28,7 @@ test:
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: The comprehensive WSGI web application library.
