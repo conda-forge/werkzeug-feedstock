@@ -1,5 +1,5 @@
 {% set name = "Werkzeug" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c80b1e5ad3665290ea39320b91e1be1e0d5f60652b964a3070216de83d2e47c
+  sha256: 3389bbfe6d40c6dd25e6d3f974155163c8b3de5bbda6a89342d4ab93fae80ba0
 
 build:
   noarch: python
@@ -16,19 +16,24 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
+    - dataclasses
 
 test:
+  requires:
+    - pip
   imports:
     - werkzeug
     - werkzeug.debug
+  commands:
+    - pip check
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
   summary: The comprehensive WSGI web application library.
