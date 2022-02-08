@@ -1,4 +1,5 @@
 {% set version = "2.0.3" %}
+{% set cov_fail_under = 82 %}
 
 package:
   name: werkzeug
@@ -10,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,13 +22,22 @@ requirements:
     - python >=3.7
 
 test:
+  source_files:
+    - tests
   requires:
+    - cryptography
+    - greenlet
     - pip
+    - pytest
+    - pytest-timeout
+    - pytest-xprocess
+    - watchdog
+    - pytest-cov
   imports:
     - werkzeug
-    - werkzeug.debug
   commands:
     - pip check
+    - pytest tests -vv --cov werkzeug --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under {{ cov_fail_under }}
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
