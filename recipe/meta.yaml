@@ -26,13 +26,14 @@ test:
     - tests
   requires:
     - cryptography
+    - ephemeral-port-reserve
     - greenlet
     - pip
     - pytest
+    - pytest-cov
     - pytest-timeout
     - pytest-xprocess
     - watchdog
-    - pytest-cov
   imports:
     - werkzeug
   commands:
