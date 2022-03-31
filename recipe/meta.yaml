@@ -1,5 +1,6 @@
 {% set version = "2.1.0" %}
 {% set cov_fail_under = 82 %}
+{% set test_skip = '"-k not exclude_patterns"' %}
 
 package:
   name: werkzeug
@@ -38,7 +39,7 @@ test:
     - werkzeug
   commands:
     - pip check
-    - pytest tests -vv --cov werkzeug --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under {{ cov_fail_under }}
+    - pytest tests -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} {{ test_skip }}
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
