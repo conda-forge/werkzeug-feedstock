@@ -1,5 +1,6 @@
-{% set version = "2.0.3" %}
-{% set cov_fail_under = 82 %}
+{% set version = "2.1.0" %}
+{% set cov_fail_under = 86 %}
+{% set test_skip = '"-k not exclude_patterns"' %}
 
 package:
   name: werkzeug
@@ -7,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/W/Werkzeug/Werkzeug-{{ version }}.tar.gz
-  sha256: b863f8ff057c522164b6067c9e28b041161b4be5ba4d0daceeaa50a163822d3c
+  sha256: 9b55466a3e99e13b1f0686a66117d39bda85a992166e0a79aedfcf3586328f7a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -26,18 +27,19 @@ test:
     - tests
   requires:
     - cryptography
+    - ephemeral-port-reserve
     - greenlet
     - pip
     - pytest
+    - pytest-cov
     - pytest-timeout
     - pytest-xprocess
     - watchdog
-    - pytest-cov
   imports:
     - werkzeug
   commands:
     - pip check
-    - pytest tests -vv --cov werkzeug --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under {{ cov_fail_under }}
+    - pytest tests -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} {{ test_skip }}
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
