@@ -1,5 +1,5 @@
 {% set version = "2.2.0" %}
-{% set cov_fail_under = 86 %}
+{% set cov_fail_under = 84 %}
 {% set test_skip = "\"-k not exclude_patterns\"" %}
 
 package:
