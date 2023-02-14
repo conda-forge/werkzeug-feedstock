@@ -1,4 +1,4 @@
-{% set version = "2.2.2" %}
+{% set version = "2.2.3" %}
 {% set cov_fail_under = 84 %}
 {% set test_skip = "\"-k not exclude_patterns\"" %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/W/Werkzeug/Werkzeug-{{ version }}.tar.gz
-  sha256: 7ea2d48322cc7c0f8b3a215ed73eabd7b5d75d0b50e31ab006286ccff9e00b8f
+  sha256: 2e1ccc9417d4da358b9de6f174e3ac094391ea1d4fbef2d667865d819dfd0afe
 
 build:
   noarch: python
