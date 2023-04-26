@@ -1,11 +1,11 @@
-About werkzeug
-==============
+About werkzeug-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/werkzeug-feedstock/blob/main/LICENSE.txt)
 
 Home: https://palletsprojects.com/p/werkzeug/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/werkzeug-feedstock/blob/main/LICENSE.txt)
 
 Summary: The comprehensive WSGI web application library.
 
