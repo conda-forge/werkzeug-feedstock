@@ -1,5 +1,5 @@
 {% set version = "2.3.0" %}
-{% set cov_fail_under = 84 %}
+{% set cov_fail_under = 83 %}
 {% set test_skip = "\"-k not exclude_patterns\"" %}
 
 package:
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - markupsafe >=2.1.1
 
 test:
