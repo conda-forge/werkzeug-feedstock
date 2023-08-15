@@ -1,27 +1,28 @@
-{% set version = "2.3.6" %}
+{% set version = "2.3.7" %}
 {% set cov_fail_under = 83 %}
-{% set test_skip = "\"-k not exclude_patterns\"" %}
+{% set test_skip = "exclude_patterns" %}
 
 package:
   name: werkzeug
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/W/Werkzeug/Werkzeug-{{ version }}.tar.gz
-  sha256: 98c774df2f91b05550078891dee5f0eb0cb797a522c757a2452b9cee5b202330
+  url: https://pypi.io/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
+  sha256: 2b8c0e447b4b9dbcc85dd97b6eeb4dcbaf6c8b6c3be0bd654e25553e0a2157d8
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
-    - python >=3.8
     - pip
-  run:
     - python >=3.8
+    - flit-core <4
+  run:
     - markupsafe >=2.1.1
+    - python >=3.8
 
 test:
   source_files:
@@ -40,7 +41,7 @@ test:
     - werkzeug
   commands:
     - pip check
-    - pytest tests -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} {{ test_skip }}
+    - pytest -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} -k "not {{ test_skip }}"
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
