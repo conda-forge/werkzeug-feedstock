@@ -30,13 +30,13 @@ test:
     - tests
     - pyproject.toml
   requires:
+    - coverage
     - cryptography
     - ephemeral-port-reserve
     - greenlet
     - mypy
     - pip
     - pytest
-    - pytest-cov
     - pytest-timeout
     - pytest-xprocess
     - watchdog
@@ -44,7 +44,8 @@ test:
     - werkzeug
   commands:
     - pip check
-    - pytest -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} -k "not {{ test_skip }}"
+    - coverage run -m pytest -vv -k "not {{ test_skip }}"
+    - coverage report --fail-under={{ cov_fail_under }}
     - mypy -p werkzeug
 
 about:
