@@ -1,5 +1,6 @@
 {% set version = "3.0.0" %}
 {% set cov_fail_under = 83 %}
+# if this becomes a list, should be ` or `-delimited, with parentheses: "(exclude_patterns or foo_bar)"
 {% set test_skip = "exclude_patterns" %}
 
 package:
@@ -27,6 +28,7 @@ requirements:
 test:
   source_files:
     - tests
+    - pyproject.toml
   requires:
     - cryptography
     - ephemeral-port-reserve
