@@ -39,6 +39,7 @@ test:
     - pytest
     - pytest-timeout
     - pytest-xprocess
+    - types-setuptools
     - watchdog
   imports:
     - werkzeug
