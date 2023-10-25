@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 {% set cov_fail_under = 83 %}
 # if this becomes a list, should be ` or `-delimited, with parentheses: "(exclude_patterns or foo_bar)"
 {% set test_skip = "exclude_patterns" %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
-  sha256: 3ffff4dcc32db52ef3cc94dff3000a3c2846890f3a5a51800a27b909c5e770f0
+  sha256: 507e811ecea72b18a404947aded4b3390e1db8f826b494d76550ef45bb3b1dcc
 
 build:
   noarch: python
