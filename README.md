@@ -184,5 +184,4 @@ Feedstock Maintainers
 
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@goanpeca](https://github.com/goanpeca/)
-* [@mcs07](https://github.com/mcs07/)
 
