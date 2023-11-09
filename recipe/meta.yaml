@@ -1,5 +1,6 @@
 {% set version = "2.3.8" %}
 {% set cov_fail_under = 83 %}
+# if this becomes a list, should be ` or `-delimited, with parentheses: "(exclude_patterns or foo_bar)"
 {% set test_skip = "exclude_patterns" %}
 
 package:
@@ -28,12 +29,12 @@ test:
   source_files:
     - tests
   requires:
+    - coverage
     - cryptography
     - ephemeral-port-reserve
     - greenlet
     - pip
     - pytest
-    - pytest-cov
     - pytest-timeout
     - pytest-xprocess
     - watchdog
@@ -41,7 +42,10 @@ test:
     - werkzeug
   commands:
     - pip check
-    - pytest -vv --cov=werkzeug --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under={{ cov_fail_under }} -k "not {{ test_skip }}"
+    - coverage run -m pytest -vv -k "not {{ test_skip }}"
+    - coverage report --fail-under={{ cov_fail_under }}
+    - mypy -p werkzeug
+
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
@@ -89,5 +93,4 @@ about:
 extra:
   recipe-maintainers:
     - goanpeca
-    - mcs07
     - bollwyvl
