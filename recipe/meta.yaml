@@ -1,4 +1,4 @@
-{% set version = "3.0.1" %}
+{% set version = "2.3.8" %}
 {% set cov_fail_under = 83 %}
 # if this becomes a list, should be ` or `-delimited, with parentheses: "(exclude_patterns or foo_bar)"
 {% set test_skip = "exclude_patterns" %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
-  sha256: 507e811ecea72b18a404947aded4b3390e1db8f826b494d76550ef45bb3b1dcc
+  sha256: 554b257c74bbeb7a0d254160a4f8ffe185243f52a52035060b761ca62d977f03
 
 build:
   noarch: python
@@ -34,20 +34,18 @@ test:
     - cryptography
     - ephemeral-port-reserve
     - greenlet
-    - mypy
     - pip
     - pytest
     - pytest-timeout
     - pytest-xprocess
-    - types-setuptools
     - watchdog
   imports:
     - werkzeug
   commands:
     - pip check
-    - coverage run -m pytest -vv -k "not {{ test_skip }}"
+    - coverage run -m pytest --color=yes --tb=long -vv -k "not {{ test_skip }}"
     - coverage report --fail-under={{ cov_fail_under }}
-    - mypy -p werkzeug
+
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
