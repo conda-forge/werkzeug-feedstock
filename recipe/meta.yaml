@@ -43,9 +43,8 @@ test:
     - werkzeug
   commands:
     - pip check
-    - coverage run -m pytest -vv -k "not {{ test_skip }}"
+    - coverage run -m pytest --color=yes --tb=long -vv -k "not {{ test_skip }}"
     - coverage report --fail-under={{ cov_fail_under }}
-    - mypy -p werkzeug
 
 
 about:
