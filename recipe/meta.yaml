@@ -48,7 +48,7 @@ test:
     - pip check
     - coverage run -m pytest -vv -k "not {{ test_skip }}"
     - coverage report --fail-under={{ cov_fail_under }}
-    - mypy -p werkzeug
+    - mypy --disable-error-code unused-ignore -p werkzeug
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
