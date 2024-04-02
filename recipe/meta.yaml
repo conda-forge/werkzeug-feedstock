@@ -38,7 +38,8 @@ test:
     - pip
     - pytest
     - pytest-timeout
-    - pytest-xprocess
+    # see https://github.com/pallets/werkzeug/issues/2875
+    - pytest-xprocess <1.0.0
     - types-setuptools
     - watchdog
   imports:
