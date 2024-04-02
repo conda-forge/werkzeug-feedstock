@@ -1,4 +1,4 @@
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 {% set cov_fail_under = 83 %}
 # if this becomes a list, should be ` or `-delimited, with parentheses: "(exclude_patterns or foo_bar)"
 {% set test_skip = "exclude_patterns" %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
-  sha256: 507e811ecea72b18a404947aded4b3390e1db8f826b494d76550ef45bb3b1dcc
+  sha256: e39b645a6ac92822588e7b39a692e7828724ceae0b0d702ef96701f90e70128d
 
 build:
   noarch: python
@@ -38,7 +38,8 @@ test:
     - pip
     - pytest
     - pytest-timeout
-    - pytest-xprocess
+    # see https://github.com/pallets/werkzeug/issues/2875
+    - pytest-xprocess <1.0.0
     - types-setuptools
     - watchdog
   imports:
@@ -47,7 +48,7 @@ test:
     - pip check
     - coverage run -m pytest -vv -k "not {{ test_skip }}"
     - coverage report --fail-under={{ cov_fail_under }}
-    - mypy -p werkzeug
+    - mypy --disable-error-code unused-ignore -p werkzeug
 
 about:
   home: https://palletsprojects.com/p/werkzeug/
