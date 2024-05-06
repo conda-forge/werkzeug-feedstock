@@ -54,7 +54,7 @@ about:
   home: https://palletsprojects.com/p/werkzeug/
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.rst
+  license_file: LICENSE.txt
   summary: The comprehensive WSGI web application library.
   description: |
     **_werkzeug_** German noun: "tool". Etymology: *werk* ("work"), *zeug* ("stuff")
