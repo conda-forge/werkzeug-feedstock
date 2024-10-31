@@ -8,22 +8,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/w/werkzeug/werkzeug-{{ version }}.tar.gz
   sha256: 6f2a0d38f25ba5a75c36c45b4ae350c7a23b57e3b974e9eb2d6851f2c648c00d
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
+  script: 
+    - {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
-    - pip
-    - python >=3.8
     - flit-core <4
+    - pip
+    - python >=3.9
   run:
     - markupsafe >=2.1.1
-    - python >=3.8
+    - python >=3.9
 
 test:
   source_files:
@@ -38,15 +39,14 @@ test:
     - pip
     - pytest
     - pytest-timeout
-    # see https://github.com/pallets/werkzeug/issues/2875
-    - pytest-xprocess <1.0.0
+    - pytest-xprocess
     - types-setuptools
     - watchdog
   imports:
     - werkzeug
   commands:
     - pip check
-    - coverage run -m pytest -vv -k "not {{ test_skip }}"
+    - coverage run -m pytest -vv --tb=long --color=yes -k "not {{ test_skip }}"
     - coverage report --fail-under={{ cov_fail_under }}
     - mypy --disable-error-code unused-ignore -p werkzeug
 
