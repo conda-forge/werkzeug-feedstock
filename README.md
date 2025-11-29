@@ -21,22 +21,22 @@ become one of the most advanced WSGI utility libraries.
 
 It includes:
 
-  -   An interactive debugger that allows inspecting stack traces and
-      source code in the browser with an interactive interpreter for any
-      frame in the stack.
-  -   A full-featured request object with objects to interact with
-      headers, query args, form data, files, and cookies.
-  -   A response object that can wrap other WSGI applications and handle
-      streaming data.
-  -   A routing system for matching URLs to endpoints and generating URLs
-      for endpoints, with an extensible system for capturing variables
-      from URLs.
-  -   HTTP utilities to handle entity tags, cache control, dates, user
-      agents, cookies, files, and more.
-  -   A threaded WSGI server for use while developing applications
-      locally.
-  -   A test client for simulating HTTP requests during testing without
-      requiring running a server.
+-   An interactive debugger that allows inspecting stack traces and
+source code in the browser with an interactive interpreter for any
+frame in the stack.
+-   A full-featured request object with objects to interact with
+headers, query args, form data, files, and cookies.
+-   A response object that can wrap other WSGI applications and handle
+streaming data.
+-   A routing system for matching URLs to endpoints and generating URLs
+for endpoints, with an extensible system for capturing variables
+from URLs.
+-   HTTP utilities to handle entity tags, cache control, dates, user
+agents, cookies, files, and more.
+-   A threaded WSGI server for use while developing applications
+locally.
+-   A test client for simulating HTTP requests during testing without
+requiring running a server.
 
 Werkzeug doesn't enforce any dependencies. It is up to the developer to
 choose a template engine, database adapter, and even how to handle
@@ -46,7 +46,6 @@ such as blogs, wikis, or bulletin boards.
 [Flask](https://www.palletsprojects.com/p/flask/) wraps Werkzeug, using it to handle the details of WSGI while
 providing more structure and patterns for defining powerful
 applications.
-
 
 Current build status
 ====================
@@ -137,12 +136,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -169,7 +168,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/werkzeug-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
