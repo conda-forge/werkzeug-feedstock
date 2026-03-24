@@ -98,9 +98,9 @@ about:
     [Flask](https://www.palletsprojects.com/p/flask/) wraps Werkzeug, using it to handle the details of WSGI while
     providing more structure and patterns for defining powerful
     applications.
-  homepage: https://palletsprojects.com/p/werkzeug/
+  homepage: https://pypi.org/project/werkzeug
   repository: https://github.com/pallets/werkzeug
-  documentation: https://werkzeug.palletsprojects.com/
+  documentation: https://werkzeug.palletsprojects.com
 
 extra:
   recipe-maintainers:
