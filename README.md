@@ -3,7 +3,7 @@ About werkzeug-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/werkzeug-feedstock/blob/main/LICENSE.txt)
 
-Home: https://palletsprojects.com/p/werkzeug/
+Home: https://pypi.org/project/werkzeug
 
 Package license: BSD-3-Clause
 
