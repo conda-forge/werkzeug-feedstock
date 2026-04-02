@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.1.7"
+  version: "3.1.8"
   python_check_max: "3.14"
   cov_fail_under: "83"
   test_skip: not exclude_patterns
@@ -13,7 +13,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/werkzeug/werkzeug-${{ version }}.tar.gz
-  sha256: fb8c01fe6ab13b9b7cdb46892b99b1d66754e1d7ab8e542e865ec13f526b5351
+  sha256: 9bad61a4268dac112f1c5cd4630a56ede601b6ed420300677a869083d70a4c44
 
 build:
   number: 0
