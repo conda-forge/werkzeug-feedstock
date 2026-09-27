@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "3.1.8"
+  version: "3.1.9"
   python_check_max: "3.14"
   cov_fail_under: "83"
   test_skip: not exclude_patterns
@@ -12,18 +12,18 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/w/werkzeug/werkzeug-${{ version }}.tar.gz
-  sha256: 9bad61a4268dac112f1c5cd4630a56ede601b6ed420300677a869083d70a4c44
+  url: https://files.pythonhosted.org/packages/source/w/werkzeug/werkzeug-${{ version }}.tar.gz
+  sha256: 55ca7c70a75689be937aa27f8ff4b018f06ff4838fc73045560bf0f5a1291060
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
-    - flit-core <4
+    - flit-core >=3.11,<5
     - pip
     - python ${{ python_min }}.*
   run:
@@ -31,6 +31,13 @@ requirements:
     - python >=${{ python_min }}
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/werkzeug/**
+      site_packages:
+        - werkzeug/**
+        - werkzeug-${{ version }}.dist-info/**
   - python:
       imports: werkzeug
       pip_check: true
