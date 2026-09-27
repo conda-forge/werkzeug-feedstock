@@ -33,6 +33,8 @@ requirements:
 tests:
   - package_contents:
       strict: true
+      files:
+        - etc/conda/test-files/werkzeug/**
       site_packages:
         - werkzeug/**
         - werkzeug-${{ version }}.dist-info/**
